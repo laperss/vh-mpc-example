@@ -28,6 +28,7 @@ The examples use a simple linear drone model, with 12 states and 4 inputs.
 ### Increasing horizon demonstration
 The files [VH_MPC_test_nominal.cpp](../blob/master/VH_MPC_test_nominal.cpp) and [VH_MPC_test_recursive.cpp](../blob/master/VH_MPC_test_recursive.cpp) 
 contains the code demonstrating the time results of the nominal factorization and the recursive LDL factorization. 
-An average over 20 runs is illustrated below: 
+The same problem (with the same initial condition) is solved for over an increasing horizon varying between N=40 and N=50. 
+The average result over 20 runs is illustrated below: 
 
 ![Standard method](https://github.com/laperss/vh-mpc-example/blob/master/figures/compare.jpg)
