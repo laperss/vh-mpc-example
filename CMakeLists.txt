@@ -26,3 +26,21 @@ SET (SRCS
 add_executable(vh_mpc_test_recursive ${SRCS} )
 target_link_libraries (vh_mpc_test_recursive Eigen3::Eigen osqp::osqp   ${Boost_LIBRARIES} )
 target_include_directories(vh_mpc_test_recursive PUBLIC include /home/laperss/Programs/osqp/lin_sys/direct/qdldl  ./dji_export/)
+
+
+# SIMPLE CLOSED LOOP SIMULTAIONS ====================================================================
+SET (SRCS
+  ./VH_MPC_closed_loop_nominal.cpp
+  ./src/quad_dynamics.cpp
+  ./src/VH_MPC.cpp)
+add_executable(vh_mpc_closed_loop_nominal ${SRCS} )
+target_link_libraries (vh_mpc_closed_loop_nominal Eigen3::Eigen osqp::osqp  ${Boost_LIBRARIES} )
+target_include_directories(vh_mpc_closed_loop_nominal PUBLIC include /home/laperss/Programs/osqp/lin_sys/direct/qdldl  ./dji_export/)
+
+SET (SRCS
+  ./VH_MPC_closed_loop_recursive.cpp
+  ./src/quad_dynamics.cpp
+  ./src/VH_MPC.cpp)
+add_executable(vh_mpc_closed_loop_recursive ${SRCS} )
+target_link_libraries (vh_mpc_closed_loop_recursive Eigen3::Eigen osqp::osqp  ${Boost_LIBRARIES} )
+target_include_directories(vh_mpc_closed_loop_recursive PUBLIC include /home/laperss/Programs/osqp/lin_sys/direct/qdldl  ./dji_export/)
