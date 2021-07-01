@@ -11,8 +11,19 @@ Two methods are used to lower the total solve time when updating between differe
 * The terminal cost and constraints are chosen so that the integer optimization in the VH-MPC problem becomes convex. Thus we only have to search for a local minima. 
 * The similarities between the subproblems are exploited by deriving a recursive LDL factorization method. 
 
+## Install
+To run the code, you must first have the following version of OSQP installed: [https://github.com/laperss/osqp-recursive-ldl](https://github.com/laperss/osqp-recursive-ldl)
 
-## Content
+The code can be compiled using cmake
+```sh
+mkdir build
+cd build
+cmake ..
+make
+
+```
+
+## Examples
 The examples use a simple linear drone model, with 12 states and 4 inputs. 
 ### Increasing horizon demonstration
 The files [VH_MPC_test_nominal.cpp](../blob/master/VH_MPC_test_nominal.cpp) and [VH_MPC_test_recursive.cpp](../blob/master/VH_MPC_test_recursive.cpp) 
