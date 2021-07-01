@@ -32,3 +32,10 @@ The same problem (with the same initial condition) is solved for over an increas
 The average result over 20 runs is illustrated below: 
 
 ![Standard method](https://github.com/laperss/vh-mpc-example/blob/master/figures/compare.jpg)
+
+### Increasing horizon demonstration
+The files [VH_MPC_closed_loop_nominal.cpp](../blob/master/VH_MPC_closed_loop_nominal.cpp) and [VH_MPC_closed_loop_recursive.cpp](../blob/master/VH_MPC_closed_loop_recursive.cpp) 
+demonstrates a closed-loop simulation where the system dynamics is the same as the dynamics in the MPC model. 
+A comparison of the total solve time in each iteration is shown below. 
+
+<img src="https://github.com/laperss/vh-mpc-example/blob/master/figures/closed_loop.jpg" width="500">
