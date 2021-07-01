@@ -1,0 +1,22 @@
+## A simple example of the VH-MPC algorithm. 
+This code provides a simple example of the Variable Horizon MPC alorithm, as presented in the following papers: 
+
+[Linnea Persson, Anders Hansson, and Bo Wahlberg. _A computationally fastvariable horizon MPC algorithm with application in rendezvous of autonomous unmanned vehicles._ ]()
+  In (Submitted to Control Engineering Practice), June 2021.
+  
+[Linnea Persson and Bo Wahlberg. _Variable prediction horizon control forcooperative landing on moving target._](https://ieeexplore.ieee.org/document/9438459)
+   In 2021 IEEE Aerospace Conference, March 2021.
+   
+Two methods are used to lower the total solve time when updating between different horizons: 
+* The terminal cost and constraints are chosen so that the integer optimization in the VH-MPC problem becomes convex. Thus we only have to search for a local minima. 
+* The similarities between the subproblems are exploited by deriving a recursive LDL factorization method. 
+
+
+## Content
+The examples use a simple linear drone model, with 12 states and 4 inputs. 
+### Increasing horizon demonstration
+The files [VH_MPC_test_nominal.cpp](../blob/master/VH_MPC_test_nominal.cpp) and [VH_MPC_test_recursive.cpp](../blob/master/VH_MPC_test_recursive.cpp) 
+contains the code demonstrating the time results of the nominal factorization and the recursive LDL factorization. 
+An average over 20 runs is illustrated below: 
+
+![Standard method](https://github.com/laperss/vh-mpc-example/blob/master/figures/compare.jpg)
