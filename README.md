@@ -2,7 +2,7 @@
 This code provides a simple example of the Variable Horizon MPC alorithm, as presented in the following papers: 
 
 [Linnea Persson, Anders Hansson, and Bo Wahlberg. _A computationally fastvariable horizon MPC algorithm with application in rendezvous of autonomous unmanned vehicles._ ]()
-  In (Submitted to Control Engineering Practice), June 2021.
+  In (Submitted to IEEE Transactions on Control Systems Technology), June 2021.
   
 [Linnea Persson and Bo Wahlberg. _Variable prediction horizon control forcooperative landing on moving target._](https://ieeexplore.ieee.org/document/9438459)
    In 2021 IEEE Aerospace Conference, March 2021.
@@ -19,7 +19,7 @@ The code can be compiled using cmake
 mkdir build
 cd build
 cmake ..
-make
+sudo make install
 
 ```
 
